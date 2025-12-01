@@ -165,28 +165,42 @@ body {
 .assignment-card p {
     margin-bottom: 15px;
     color: #555;
+    min-height: 75px; /* Altura mínima para alinear mejor las tarjetas */
 }
 
-.assignment-link {
-    display: inline-block;
+/* ESTILO ESPECÍFICO PARA LA LISTA DE ARCHIVOS */
+.file-list {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0;
+    margin-top: 15px;
+}
+
+.file-list li {
+    margin-bottom: 5px;
+}
+
+.file-list a {
+    display: block;
     color: var(--primary-color);
-    font-weight: 600;
+    font-size: 0.9em;
     text-decoration: none;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 2px;
+    padding: 5px;
+    background-color: #e0f7fa; /* Fondo ligero para cada archivo */
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
 }
 
-.assignment-link:hover {
-    color: var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
+.file-list a:hover {
+    background-color: #c4e4e9;
+    text-decoration: underline;
 }
 
 .note {
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-    background-color: #e0f7fa; /* Un azul muy claro */
-    border-left: 5px solid var(--primary-color);
+    background-color: #ffffe0; /* Amarillo suave para la nota de advertencia */
+    border-left: 5px solid var(--secondary-color);
     border-radius: 5px;
 }
 
@@ -212,5 +226,8 @@ footer {
     }
     .info-section h2, .assignments-section h2 {
         font-size: 1.8em;
+    }
+    .assignment-card p {
+        min-height: auto; /* Desactivar la altura fija en móviles */
     }
 }
